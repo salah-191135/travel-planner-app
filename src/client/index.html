@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Travel Planner</h1>
+            <ul>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#saved-trips">Saved Trips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="banner" class="banner">
+        <div class="banner-image">
+            <img src="./images/nappy.jpg" alt="missing image">
+        </div>
+        <div class="banner-content">
+            <h2>Plan Your Perfect Trip</h2>
+            <p>Discover amazing destinations and plan your next adventure</p>
+            <button id="show-form-btn" class="btn">Add New Trip</button>
+        </div>
+    </section>
+
+    <section id="trip-form" class="form-section hidden">
+        <form id="travelForm">
+            <h1>Plan Your Trip</h1>
+            <div class="form-group">
+                <label for="location">Destination:</label>
+                <input type="text" id="location" required>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" required>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn">Preview Trip</button>
+                <button type="button" id="cancel-form" class="btn btn-secondary">Cancel</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="current-trip" class="current-trip hidden">
+        <div class="trip-preview">
+            <h3>Your Trip Preview</h3>
+            <div id="preview-content" class="preview-content"></div>
+
+        </div>
+    </section>
+
+    <section id="saved-trips" class="saved-trips">
+        <h2>Saved Trips</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Dates</th>
+                    <th>Duration</th>
+                    <th>Weather</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="trips-table">
+                <!-- Saved trips will be populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- <script defer src="./app.js"></script> -->
+</body>
+
+</html>
